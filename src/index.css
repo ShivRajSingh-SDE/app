@@ -1,13 +1,75 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    background-color: #090927;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#span{
+    color:#61dafb;
 }
+#span1{
+    color:#61dafb;
+}
+
+
+  
+  .logo {
+    /* Add your logo styles here */
+  }
+  
+  .menu {
+    /* Add your menu styles here */
+  }
+  
+  .menu-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu-item {
+    /* Add your menu item styles here */
+  }
+  
+
+  /* #appcolor{
+    background-image: linear-gradient(#01a2b8a2,rgba(8, 201, 191, 0.452));
+  } */
+
+  #appcolor{
+    background-image: linear-gradient(#11335f6e,rgba(120, 181, 223, 0.473));
+  }
+
+
+
+  @keyframes borderAnimation {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  .animated-border {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .animated-border::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(0, 255, 255);
+    animation: borderAnimation 2s linear forwards;
+  }
+  
+
