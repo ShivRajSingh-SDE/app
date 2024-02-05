@@ -3,73 +3,59 @@
 @tailwind utilities;
 
 
+
+
+
+  
 body{
-    background-color: #090927;
-}
 
-#span{
-    color:#61dafb;
-}
-#span1{
-    color:#61dafb;
+  background: #ffffff;
+
+  color: black;
 }
 
 
-  
-  .logo {
-    /* Add your logo styles here */
-  }
-  
-  .menu {
-    /* Add your menu styles here */
-  }
-  
-  .menu-list {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .menu-item {
-    /* Add your menu item styles here */
-  }
-  
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 
-  /* #appcolor{
-    background-image: linear-gradient(#01a2b8a2,rgba(8, 201, 191, 0.452));
-  } */
+.spinner-element {
 
-  #appcolor{
-    background-image: linear-gradient(#11335f6e,rgba(120, 181, 223, 0.473));
+  
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 
 
-  @keyframes borderAnimation {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-  
-  .animated-border {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .animated-border::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: rgb(0, 255, 255);
-    animation: borderAnimation 2s linear forwards;
-  }
-  
+/* Add this CSS to your stylesheets */
+.glitter {
+  position: absolute;
+  animation: glitter 1s infinite linear alternate;
+}
 
+@keyframes glitter {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
