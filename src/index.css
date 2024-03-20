@@ -9,11 +9,18 @@
   
 body{
 
-  background: #ffffff;
+  background: rgb(0, 0, 0);
 
-  color: black;
+  color: white;
 }
 
+#textstyle {
+  
+  background: -webkit-linear-gradient(#b322a6, #291694);
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .spinner {
   display: flex;
@@ -59,3 +66,8 @@ body{
     transform: scale(1);
   }
 }
+
+
+
+
+

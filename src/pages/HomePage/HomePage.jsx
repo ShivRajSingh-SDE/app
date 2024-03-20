@@ -6,7 +6,7 @@ import Work from "../work";
 import Project from "../project";
 import Other from "../other";
 import Contact from "../contact";
-import Secret from "../Secret";
+
 import LoadingScreen from "../LoadingScreen";
 
 const HomePage = () => {
@@ -23,7 +23,7 @@ const HomePage = () => {
 
     setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    });
 
     return () => {
       document.removeEventListener("mousemove", trackMouse);
@@ -41,7 +41,6 @@ const HomePage = () => {
       <About />
       <Work />
       <Project />
-      <Other />
       <Contact />
       <div className="fixed hidden md:flex top-0 left-0 z-50 pointer-events-none">
         <div
@@ -58,9 +57,11 @@ const HomePage = () => {
             left: `${mousePosition.x}px`,
           }}
         >
-          <span role="img" aria-label="emoji" style={{ fontSize: "32px" }}>
-            💀
-          </span>
+          <span
+            role="img"
+            aria-label="emoji"
+            style={{ fontSize: "32px" }}
+          ></span>
         </div>
       </div>
     </div>

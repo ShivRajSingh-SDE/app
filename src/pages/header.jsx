@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import logo from "../assets/img/logo.png";
 import { AiOutlineSlackSquare, AiOutlineSlack } from "react-icons/ai";
+import "../css/header.css";
 
 export default function Header() {
   const [toggle, setToggle] = useState(false);
@@ -13,31 +14,27 @@ export default function Header() {
   return (
     <div
       className="header-container 
-     max-w-[1250px] mx-auto p-3 bg-[#00000027] shadow-[#b7a9eb63] border-2 sticky z-50 top-0 flex justify-between items-center duration-300 shadow-2xl rounded-br-3xl rounded-bl-3xl"
+     md:max-w-[90%] mx-auto md:p-3 bg-[#00000027] shadow-[#e771ff34] backdrop-filter backdrop-blur-lg bg-opacity-40  sticky z-50 top-0 flex justify-between items-center duration-300 shadow rounded-br-3xl rounded-bl-3xl"
     >
       <a href="/">
-        <div className="logo  border-2 p-2 rounded-lg">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Logo_CODE.svg/1280px-Logo_CODE.svg.png"
-            className="h-[30px] "
-            alt="Logo"
-          />
-          {/* <h1 className="text-[20px] text-[#808080ce]">Shiv</h1> */}
+        <div className="logo   p-2 rounded-lg">
+          {/* <img src={logo} className="h-[40px]" alt="Logo" /> */}
+          <h1 className="text-[30px]  text-white">𝕻𝖔𝖗𝖙𝖋𝖔𝖑𝖎𝖔</h1>
         </div>
       </a>
       {toggle ? (
         <AiOutlineSlackSquare
           onClick={toggleMenu}
-          className="md:hidden block text-[50px] text-[#000000]"
+          className="md:hidden block md:text-[50px] text-[30px] text-white cursor-pointer "
         />
       ) : (
         <AiOutlineSlack
           onClick={toggleMenu}
-          className="md:hidden block text-[50px] text-[#000000]"
+          className="md:hidden block md:text-[50px] text-[30px] text-white cursor-pointer "
         />
       )}
 
-      <ul className="hidden md:flex text-[#000000] justify-center items-center flex-row gap-5 text-[16px] font-bold">
+      <ul className="hidden md:flex text-white cursor-pointer  justify-center items-center flex-row gap-5 text-[16px] font-bold">
         <li className="hover:scale-110 duration-300 ease-in-out hover:text-[#4f47c5]">
           <Link to="main" spy={true} smooth={true} offset={-70} duration={500}>
             Home
@@ -70,13 +67,17 @@ export default function Header() {
             Project
           </Link>
         </li>
-        <li className="p-3 hover:scale-110 duration-300 ease-in-out justify-center flex bg-[white] rounded-2xl text-[black] hover:text-[#4f47c5]">
-          <a href="https://drive.google.com/file/d/1q4v0DQFQah3rBiRzL0-VRezWob5miEC3/view">
+        <button className="cv ml-5">
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1q4v0DQFQah3rBiRzL0-VRezWob5miEC3/view"
+          >
             Resume
           </a>
-        </li>
+        </button>
       </ul>
 
+      {/* mobile  */}
       <ul
         className={`responsive md:hidden text-black fixed w-[100%] h-[100%] top-20 bg-white justify-center items-center flex-row gap-5 text-[16px] font-bold ${
           toggle ? "left-[0]" : "left-[-100%]"
