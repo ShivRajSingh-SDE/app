@@ -1,6 +1,5 @@
 import "./App.css";
 import HomePage from "./pages/HomePage/HomePage";
-import Secret from "./pages/Secret";
 
 function App() {
   return (

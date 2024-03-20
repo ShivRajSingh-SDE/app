@@ -1,0 +1,874 @@
+.container {
+    width: 100%;
+    height: 100%;
+  
+   
+    --gap: 5em;
+    --line: 1px;
+    --color: rgba(255, 255, 255, 0.11);
+    z-index: -100;
+  
+    background-image: linear-gradient(
+        -90deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      ),
+      linear-gradient(
+        0deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      );
+    background-size: var(--gap) var(--gap);
+  }
+  
+
+
+  /* hover me img  */
+  .boxside {
+    position: relative;
+    width: 400px;
+    height: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 1;
+   }
+   
+   .boxside::before {
+    content: ' ';
+    position: absolute;
+    top: 4;
+    left: 2px;
+    width: 100%;
+    height: 120%;
+    text-decoration: none;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+   }
+   
+   .boxside::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50;
+    width: 70%;
+    height: 120%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: blur(30px);
+   }
+   
+   .boxside:hover:before,
+   .boxside:hover:after {
+    transform: skewX(0deg) scaleX(1.3);
+   }
+   
+   .boxside:before,
+   .boxside:after {
+    background: linear-gradient(315deg, #ffbc00, #ff0058)
+   }
+   
+   .boxside span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    pointer-events: none;
+   }
+   
+   .boxside span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.1s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08)
+   }
+   
+   .boxside span::before {
+    top: -50px;
+    left: 40px;
+    width: 50px;
+    border-radius: 15%;
+    height: 50px;
+    opacity: 1;
+   }
+   
+   .boxside span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    animation-delay: -1s;
+   }
+   
+   .boxside span:after {
+    bottom: -40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+   }
+   
+   .boxside .contentside {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    transform: 0.5s;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   .boxside .contentside img {
+    
+    margin-bottom: 10px;
+   }
+
+   @media screen and (max-width: 700px) {
+    .boxside .contentside {
+        position: relative;
+        width: 500px;
+        padding: 30px 30px;
+        height: 300px;
+        display: flex ;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boxside {
+            position: relative;
+            width: 260px;
+            height: 250px;
+    }
+    
+  }
+
+
+   /* linkdine  */
+   .tooltip-containerli {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 17px;
+    border-radius: 10px;
+  }
+  
+  .tooltipli {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    border-radius: 15px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  .profileli {
+    background: #2a2b2f;
+    border-radius: 10px 15px;
+    padding: 10px;
+    border: 1px solid rgba(11, 63, 95, 1);
+  }
+  
+  .tooltip-containerli:hover .tooltipli {
+    top: -150px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .iconli {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    position: relative;
+  }
+  .layerli {
+    width: 55px;
+    height: 55px;
+    transition: transform 0.3s;
+  }
+  .iconli:hover .layerli {
+    transform: rotate(-35deg) skew(20deg);
+  }
+  .layerli span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  .layerli span,
+  .textli {
+    color: #1da1f2;
+    border-color: #1da1f2;
+  }
+  
+  .iconli:hover.layerli span {
+    box-shadow: -1px 1px 3px #1da1f2;
+  }
+  .iconli .textli {
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    opacity: 0;
+    font-weight: 500;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+  }
+  .iconli:hover .textli {
+    bottom: -35px;
+    opacity: 1;
+  }
+  
+  .iconli:hover .layerli span:nth-child(1) {
+    opacity: 0.2;
+  }
+  .iconli:hover .layerli span:nth-child(2) {
+    opacity: 0.4;
+    transform: translate(5px, -5px);
+  }
+  .iconli:hover .layerli span:nth-child(3) {
+    opacity: 0.6;
+    transform: translate(10px, -10px);
+  }
+  .iconli:hover .layerli span:nth-child(4) {
+    opacity: 0.8;
+    transform: translate(15px, -15px);
+  }
+  .iconli:hover .layerli span:nth-child(5) {
+    opacity: 1;
+    transform: translate(20px, -20px);
+  }
+  
+  .layerli span.fab {
+    font-size: 30px;
+    line-height: 64px;
+    text-align: center;
+    fill: #1da1f2;
+    background: #000;
+  }
+  .userli {
+    display: flex;
+    gap: 10px;
+  }
+  .imgli {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    border: 1px solid #1da1f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #08afc5;
+  }
+  .nameli {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1da1f2;
+  }
+  .detailsli {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    color: #fff;
+  }
+  .aboutli {
+    color: #ccc;
+    padding-top: 5px;
+  }
+  
+
+  /* insta  */
+
+  .tooltip-containerin {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 17px;
+    border-radius: 10px;
+  }
+  
+  .tooltipin {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    border-radius: 15px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  .profilein {
+    background: #2a2b2f;
+    border-radius: 10px 15px;
+    padding: 10px;
+    border: 1px solid #52382f;
+  }
+  
+  .tooltip-containerin:hover .tooltipin {
+    top: -150px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .iconin {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    position: relative;
+  }
+  .layerin {
+    width: 55px;
+    height: 55px;
+    transition: transform 0.3s;
+  }
+  .iconin:hover .layerin {
+    transform: rotate(-35deg) skew(20deg);
+  }
+  .layerin span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    transition: all 0.3s;
+  }
+  
+  .layerin span,
+  .textin {
+    color: #e6683c;
+    border-color: #e6683c;
+  }
+  
+  .iconin:hover.layerin span {
+    box-shadow: -1px 1px 3px #e6683c;
+  }
+  .iconin .textin {
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    opacity: 0;
+    font-weight: 500;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+  }
+  .iconin:hover .textin {
+    bottom: -35px;
+    opacity: 1;
+  }
+  
+  .iconin:hover .layerin span:nth-child(1) {
+    opacity: 0.2;
+  }
+  .iconin:hover .layerin span:nth-child(2) {
+    opacity: 0.4;
+    transform: translate(5px, -5px);
+  }
+  .iconin:hover .layerin span:nth-child(3) {
+    opacity: 0.6;
+    transform: translate(10px, -10px);
+  }
+  .iconin:hover .layerin span:nth-child(4) {
+    opacity: 0.8;
+    transform: translate(15px, -15px);
+  }
+  .iconin:hover .layerin span:nth-child(5) {
+    opacity: 1;
+    transform: translate(20px, -20px);
+  }
+  
+  .instagramSVG {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    background: linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  }
+
+  .gitSVG {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(
+      45deg,
+      #e708dc 0%,
+      #042bac 25%,
+      #ad02bd 50%,
+      #c405ca 75%,
+      #076a91 100%
+    );
+    background: linear-gradient(
+        45deg,
+        #0336a3 0%,
+        #042bac 25%,
+        #ad02bd 50%,
+        #c405ca 75%,
+        #076a91 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  }
+  .userin {
+    display: flex;
+    gap: 10px;
+  }
+  .imgin {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    border: 1px solid #e6683c;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d6136e;
+  }
+  .namein {
+    font-size: 17px;
+    font-weight: 700;
+    color: #c5299e;
+  }
+  .detailsin {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    color: #fff;
+  }
+  .aboutin {
+    color: #ccc;
+    padding-top: 5px;
+  }
+  
+
+
+  /* .gitSVG */
+
+  .tooltip-containergit {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 17px;
+    border-radius: 10px;
+  }
+  
+  .tooltipgit {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    border-radius: 15px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  .profilegit {
+    background: #2a2b2f;
+    border-radius: 10px 15px;
+    padding: 10px;
+    border: 1px solid #52382f;
+  }
+  
+  .tooltip-containergit:hover .tooltipgit {
+    top: -150px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .icongit {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    position: relative;
+  }
+  
+  .layergit {
+    width: 55px;
+    height: 55px;
+    transition: transform 0.3s;
+  }
+  
+  .icongit:hover .layergit {
+    transform: rotate(-35deg) skew(20deg);
+  }
+  
+  .layergit span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    transition: all 0.3s;
+  }
+  
+  .layergit span,
+  .textgit {
+    color: #b404a6;
+    border-color: #5d0996;
+  }
+  
+  .icongit:hover.layergit span {
+    box-shadow: -1px 1px 3px #e6683c;
+  }
+  
+  .icongit .textgit {
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    opacity: 0;
+    font-weight: 500;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .icongit:hover .textgit {
+    bottom: -35px;
+    opacity: 1;
+  }
+  
+  .icongit:hover .layergit span:nth-child(1) {
+    opacity: 0.2;
+  }
+  
+  .icongit:hover .layergit span:nth-child(2) {
+    opacity: 0.4;
+    transform: translate(5px, -5px);
+  }
+  
+  .icongit:hover .layergit span:nth-child(3) {
+    opacity: 0.6;
+    transform: translate(10px, -10px);
+  }
+  
+  .icongit:hover .layergit span:nth-child(4) {
+    opacity: 0.8;
+    transform: translate(15px, -15px);
+  }
+  
+  .icongit:hover .layergit span:nth-child(5) {
+    opacity: 1;
+    transform: translate(20px, -20px);
+  }
+  
+  .gitSVG {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(
+      45deg,
+      #e708dc 0%,
+      #042bac 25%,
+      #ad02bd 50%,
+      #c405ca 75%,
+      #076a91 100%
+    );
+    background: linear-gradient(
+      45deg,
+      #0336a3 0%,
+      #042bac 25%,
+      #ad02bd 50%,
+      #c405ca 75%,
+      #076a91 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr='#f09433',
+      endColorstr='#bc1888',
+      GradientType=1
+    );
+  }
+  
+  .usergit {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .imggit {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    border: 1px solid #b40aca;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e025f;
+  }
+  
+  .namegit {
+    font-size: 17px;
+    font-weight: 700;
+    color: #8a80dd;
+  }
+  
+  .detailsgit {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    color: #fff;
+  }
+  
+  .aboutgit {
+    color: #ccc;
+    padding-top: 5px;
+  }
+  
+
+  /* twitter  */
+  .tooltip-container-twitter {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 17px;
+    border-radius: 10px;
+  }
+  
+  .tooltip-twitter {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    border-radius: 15px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  .profile-twitter {
+    background: #2a2b2f;
+    border-radius: 10px 15px;
+    padding: 10px;
+    border: 1px solid #52382f;
+  }
+  
+  .tooltip-container-twitter:hover .tooltip-twitter {
+    top: -150px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .icong-twitter {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    position: relative;
+  }
+  
+  .layer-twitter {
+    width: 55px;
+    height: 55px;
+    transition: transform 0.3s;
+  }
+  
+  .icon-twitter:hover .layer-twitter {
+    transform: rotate(-35deg) skew(20deg);
+  }
+  
+  .layer-twitter span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    transition: all 0.3s;
+  }
+  
+  .layer-twitter span,
+  .text-twitter {
+    color: #0fdceb;
+    border-color: #11d4cb;
+  }
+  
+  .icon-twitter:hover.layer-twitter span {
+    box-shadow: -1px 1px 3px #e6683c;
+  }
+  
+  .icon-twitter .text-twitter {
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    opacity: 0;
+    font-weight: 500;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .icon-twitter:hover .text-twitter {
+    bottom: -35px;
+    opacity: 1;
+  }
+  
+  .icon-twitter:hover .layer-twitter span:nth-child(1) {
+    opacity: 0.2;
+  }
+  
+  .icon-twitter:hover .layer-twitter span:nth-child(2) {
+    opacity: 0.4;
+    transform: translate(5px, -5px);
+  }
+  
+  .icon-twitter:hover .layer-twitter span:nth-child(3) {
+    opacity: 0.6;
+    transform: translate(10px, -10px);
+  }
+  
+  .icon-twitter:hover .layer-twitter span:nth-child(4) {
+    opacity: 0.8;
+    transform: translate(15px, -15px);
+  }
+  
+  .icon-twitter:hover .layer-twitter span:nth-child(5) {
+    opacity: 1;
+    transform: translate(20px, -20px);
+  }
+  
+  .twitterSVG {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(
+      45deg,
+      #00ccff 0%,
+      #00b7ff 25%,
+      #00d9ff 50%,
+      #0bc7e9 75%,
+      #08a7e6 100%
+    );
+    background: linear-gradient(
+        45deg,
+        #00ccff 0%,
+        #00b7ff 25%,
+        #00d9ff 50%,
+        #0bc7e9 75%,
+        #08a7e6 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr='#f09433',
+      endColorstr='#bc1888',
+      GradientType=1
+    );
+  }
+  
+  .user-twitter {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .img-twitter {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    border: 1px solid #0ab4ca;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0d9cd4;
+  }
+  
+  .name-twitter {
+    font-size: 17px;
+    font-weight: 700;
+    color: #8a80dd;
+  }
+  
+  .details-twitter {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    color: #fff;
+  }
+  
+  .about-twitter {
+    color: #ccc;
+    padding-top: 5px;
+  }
+
+  

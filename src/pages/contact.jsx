@@ -1,22 +1,44 @@
 import React from "react";
+import "../css/contact.css";
 
 export default function contact() {
   return (
     <div
       id="contact"
-      className="max-w-[1300px] mx-auto justify-center items-center flex flex-col h-[80vh]"
+      className="max-w-[1300px] mx-auto justify-center items-center my-5 flex flex-col h-[80vh]"
     >
-      <h1 className=" text-[50px] text-[silver]">
-        <span id="span">04.</span> What's Next?
-      </h1>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <h1 className=" text-[50px] text-[silver]">What's Next?</h1>
       <div className=" justify-center items-center flex flex-col">
         <h1 className=" m-5 text-[25px]  text-[silver]">Get In Touch</h1>
 
-        <a href="mailto:shivrajsingh.info.me@gmail.com?subject=SweetWords&body=Please send me a copy of your new program!">
-          <button className=" p-4 rounded-xl  border-2 hover:scale-105 ease-in-out duration-200 border-[white] text-[Gray] font-semibold bg-[#6c43ff33] drop-shadow-2xl shadow-2xl ">
-            Say Hello
-          </button>
-        </a>
+        <div class="form-container">
+          <form class="form">
+            <div class="form-group">
+              <label for="email">Company Email</label>
+              <input type="text" id="email" name="email" required="" />
+            </div>
+            <div class="form-group">
+              <label for="textarea">How Can We Help You?</label>
+              <textarea
+                name="textarea"
+                id="textarea"
+                rows="10"
+                cols="50"
+                required=""
+              >
+                {" "}
+              </textarea>
+            </div>
+            <button class="form-submit-btn" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
       <svg
         className=" hover:scale-105 duration-300 ease-in-out  bottom-0 "
