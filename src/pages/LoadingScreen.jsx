@@ -1,20 +1,17 @@
 import React from "react";
-import Qr from "../assets/img/QR.png";
+import "../css/loading.css";
 
 const LoadingScreen = () => {
   return (
-    <div className="loading-screen  h-[100vh]">
-      <div className="spinner">
-        <img
-          className="spinner-element h-[30vh]"
-          src="https://cdn-icons-png.flaticon.com/512/1157/1157109.png"
-        ></img>
-        <img className=" h-[20vh]" src={Qr}></img>
-
-        <img
-          className="spinner-element h-[30vh]"
-          src="https://cdn-icons-png.flaticon.com/512/1157/1157109.png"
-        ></img>
+    <div className="  h-[100vh]">
+      <div class="pyramid-loader">
+        <div class="wrapper">
+          <span class="side side1"></span>
+          <span class="side side2"></span>
+          <span class="side side3"></span>
+          <span class="side side4"></span>
+          <span class="shadow"></span>
+        </div>
       </div>
     </div>
   );

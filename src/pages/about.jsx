@@ -62,11 +62,11 @@ export default function about() {
                 <div className="flex flex-col ">
                   <h1 className="flex flex-row ">
                     <AiOutlineStrikethrough id="span" className="m-2" />
-                    React
+                    React , Vue
                   </h1>
                   <h1 className="flex flex-row ">
                     <AiOutlineStrikethrough id="span" className="m-2" />
-                    Tailwind/CSS
+                    Tailwind.CSS, Scss
                   </h1>
                   <h1 className="flex flex-row ">
                     <AiOutlineStrikethrough id="span" className="m-2" />
@@ -74,11 +74,11 @@ export default function about() {
                   </h1>
                   <h1 className="flex flex-row ">
                     <AiOutlineStrikethrough id="span" className="m-2" />
-                    AWS, Next Js
+                    Next Js
                   </h1>
                   <h1 className="flex flex-row ">
                     <AiOutlineStrikethrough id="span" className="m-2" />
-                    TensorFlow, Bash, Figma, C/C++
+                    Bash, Figma, C/C++
                   </h1>
                 </div>
 
@@ -89,7 +89,7 @@ export default function about() {
                   </h1>
                   <h1 className="flex flex-row ">
                     <AiOutlineStrikethrough id="span" className="m-2" />
-                    Three.js, Redux
+                    Redux
                   </h1>
                   <h1 className="flex flex-row ">
                     <AiOutlineStrikethrough id="span" className="m-2" />
@@ -110,11 +110,7 @@ export default function about() {
                   <div className="flex flex-col">
                     <h1 className="flex flex-row ">
                       <AiOutlineStrikethrough id="span" className="m-2" />
-                      Solid.js
-                    </h1>
-                    <h1 className="flex flex-row ">
-                      <AiOutlineStrikethrough id="span" className="m-2" />
-                      LLM/ BlockChain
+                      LLM
                     </h1>
                   </div>
 
@@ -160,8 +156,108 @@ export default function about() {
                               <span></span>
                               <span></span>
                               <span class="fab fa-linkedin">
-                                <svg viewBox="0 0 448 512" height="1em">
-                                  <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  x="0px"
+                                  y="0px"
+                                  width="50"
+                                  height="50"
+                                  viewBox="0 0 64 64"
+                                >
+                                  <linearGradient
+                                    id="SUJNhpmDQDF27Y3OfwgfYa_44019_gr1"
+                                    x1="19"
+                                    x2="19"
+                                    y1="24.858"
+                                    y2="49.041"
+                                    gradientUnits="userSpaceOnUse"
+                                    spreadMethod="reflect"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      stop-color="#6dc7ff"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      stop-color="#e6abff"
+                                    ></stop>
+                                  </linearGradient>
+                                  <path
+                                    fill="url(#SUJNhpmDQDF27Y3OfwgfYa_44019_gr1)"
+                                    fill-rule="evenodd"
+                                    d="M22 48L22 26 16 26 16 48 22 48z"
+                                    clip-rule="evenodd"
+                                  ></path>
+                                  <linearGradient
+                                    id="SUJNhpmDQDF27Y3OfwgfYb_44019_gr2"
+                                    x1="19.382"
+                                    x2="19.382"
+                                    y1="15.423"
+                                    y2="23.341"
+                                    gradientUnits="userSpaceOnUse"
+                                    spreadMethod="reflect"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      stop-color="#6dc7ff"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      stop-color="#e6abff"
+                                    ></stop>
+                                  </linearGradient>
+                                  <path
+                                    fill="url(#SUJNhpmDQDF27Y3OfwgfYb_44019_gr2)"
+                                    fill-rule="evenodd"
+                                    d="M19.358,23c2.512,0,4.076-1.474,4.076-3.554 c-0.047-2.126-1.564-3.649-4.028-3.649c-2.465,0-4.076,1.475-4.076,3.601c0,2.08,1.563,3.602,3.981,3.602H19.358L19.358,23z"
+                                    clip-rule="evenodd"
+                                  ></path>
+                                  <linearGradient
+                                    id="SUJNhpmDQDF27Y3OfwgfYc_44019_gr3"
+                                    x1="37.386"
+                                    x2="37.386"
+                                    y1="14.125"
+                                    y2="49.525"
+                                    gradientUnits="userSpaceOnUse"
+                                    spreadMethod="reflect"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      stop-color="#6dc7ff"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      stop-color="#e6abff"
+                                    ></stop>
+                                  </linearGradient>
+                                  <path
+                                    fill="url(#SUJNhpmDQDF27Y3OfwgfYc_44019_gr3)"
+                                    fill-rule="evenodd"
+                                    d="M26.946,48H34V35.911c0-0.648,0.122-1.295,0.313-1.758 c0.52-1.295,1.877-2.635,3.867-2.635c2.607,0,3.821,1.988,3.821,4.901V48h6V35.588c0-6.657-3.085-9.498-7.826-9.498 c-3.886,0-5.124,1.91-6.072,3.91H34v-4h-7.054c0.095,2-0.175,22-0.175,22H26.946z"
+                                    clip-rule="evenodd"
+                                  ></path>
+                                  <linearGradient
+                                    id="SUJNhpmDQDF27Y3OfwgfYd_44019_gr4"
+                                    x1="32"
+                                    x2="32"
+                                    y1="6.5"
+                                    y2="57.5"
+                                    gradientUnits="userSpaceOnUse"
+                                    spreadMethod="reflect"
+                                  >
+                                    <stop
+                                      offset="0"
+                                      stop-color="#1a6dff"
+                                    ></stop>
+                                    <stop
+                                      offset="1"
+                                      stop-color="#c822ff"
+                                    ></stop>
+                                  </linearGradient>
+                                  <path
+                                    fill="url(#SUJNhpmDQDF27Y3OfwgfYd_44019_gr4)"
+                                    d="M50,57H14c-3.859,0-7-3.141-7-7V14c0-3.859,3.141-7,7-7h36c3.859,0,7,3.141,7,7v36 C57,53.859,53.859,57,50,57z M14,9c-2.757,0-5,2.243-5,5v36c0,2.757,2.243,5,5,5h36c2.757,0,5-2.243,5-5V14c0-2.757-2.243-5-5-5H14z"
+                                  ></path>
                                 </svg>
                               </span>
                             </div>

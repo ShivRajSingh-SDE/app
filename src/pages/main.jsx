@@ -79,18 +79,22 @@ export default function Main() {
           </h1>
 
           <h1 className="font-bold text-[20px] justify-center items-center flex text-[#808080a1] p-2">
-            As a MERN pro, <br className=" flex md:hidden"></br> I build
-            top-notch web solutions.
+            MERN Developer
+            <br class="flex md:hidden" /> Crafting High-Quality Web Solutions
           </h1>
-          <h1 className=" font-thin text-center text-[20px] p-5 text-[#ffffff]">
-            Seasoned Full Stack web architect with an unwavering commitment to
-            shaping dynamic web applications. Proficiency spans ReactJS,
-            JavaScript, TypeScript, HTML, CSS, Node.js, Express.js, MongoDB,
-            LLM, API, and TypeScript. Eager to elevate your projects and remain
-            at the vanguard of emerging web technologies. Let's connect and
-            create triumph together.
-            <a id="span" href="https://github.com/shivamkumarsha">
-              Learn More
+          <h1 className="font-thin text-center text-[20px] p-5 text-[#ffffff]">
+            Accomplished Full Stack Web Architect with a steadfast dedication to
+            crafting dynamic web applications. Proficient in ReactJS,
+            JavaScript, HTML, CSS, Node.js, Express.js, MongoDB, LLM
+            API, and TypeScript. Enthusiastic about enhancing your projects and
+            staying ahead with emerging web technologies. Let's collaborate and
+            achieve success together.
+            <a
+              id="textstyle"
+              target="_blank"
+              href="https://github.com/shivamkumarsha"
+            >
+              -Learn More
             </a>
           </h1>
 
