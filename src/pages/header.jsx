@@ -86,6 +86,17 @@ export default function Header() {
             Project
           </Link>
         </li>
+        <li className="hover:scale-110 duration-300 ease-in-out hover:text-[#4f47c5]">
+          <Link
+            to="Certificates"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Certificates
+          </Link>
+        </li>
         <button className="cv ml-5">
           <a
             target="_blank"

@@ -4,6 +4,7 @@ import About from "../about";
 import Work from "../work";
 import Project from "../project";
 import Contact from "../contact";
+import Certificates from "../certificates";
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <About />
       <Work />
       <Project />
+      <Certificates />
       <Contact />
     </div>
   );

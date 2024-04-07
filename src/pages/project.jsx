@@ -25,7 +25,7 @@ const Project = () => {
     };
 
     fetchProductData();
-  }, []);
+  }, [productData]);
 
   return (
     <div id="Project" className="max-w-[80%] mx-auto">
@@ -102,7 +102,7 @@ const Project = () => {
                     </button>
                     <button className="cv">
                       <a target="_blank" href={item.div.live}>
-                        Live
+                        Live Demo
                       </a>
                     </button>
                   </div>
